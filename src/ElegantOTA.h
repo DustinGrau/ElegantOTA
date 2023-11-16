@@ -1,17 +1,17 @@
 /**
-_____ _                        _    ___ _____  _    
-| ____| | ___  __ _  __ _ _ __ | |_ / _ \_   _|/ \   
-|  _| | |/ _ \/ _` |/ _` | '_ \| __| | | || | / _ \  
-| |___| |  __/ (_| | (_| | | | | |_| |_| || |/ ___ \ 
+_____ _                        _    ___ _____  _
+| ____| | ___  __ _  __ _ _ __ | |_ / _ \_   _|/ \
+|  _| | |/ _ \/ _` |/ _` | '_ \| __| | | || | / _ \
+| |___| |  __/ (_| | (_| | | | | |_| |_| || |/ ___ \
 |_____|_|\___|\__, |\__,_|_| |_|\__|\___/ |_/_/   \_\
-              |___/                                  
+              |___/
 */
 
 /**
- * 
+ *
  * @name ElegantOTA
  * @author Ayush Sharma (ayush@softt.io)
- * @brief 
+ * @brief
  * @version 3.0.0
  * @date 2023-08-30
  */
@@ -24,7 +24,7 @@ _____ _                        _    ___ _____  _
 #include "elop.h"
 
 #ifndef ELEGANTOTA_USE_ASYNC_WEBSERVER
-  #define ELEGANTOTA_USE_ASYNC_WEBSERVER 0
+  #define ELEGANTOTA_USE_ASYNC_WEBSERVER 1
 #endif
 
 #ifndef ELEGANTOTA_DEBUG
@@ -114,7 +114,7 @@ class ElegantOTAClass{
     void onStart(std::function<void()> callable);
     void onProgress(std::function<void(size_t current, size_t final)> callable);
     void onEnd(std::function<void(bool success)> callable);
-    
+
   private:
     ELEGANTOTA_WEBSERVER *_server;
 
